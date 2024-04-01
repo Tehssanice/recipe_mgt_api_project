@@ -1,7 +1,6 @@
 from fastapi import FastAPI
+from routes import router
 
-from routes import app
+app = FastAPI()
 
-api = FastAPI(title="Recipe Management API")
-
-api.include_router(app, prefix="/api")
+app.include_router(router)
