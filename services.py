@@ -11,9 +11,9 @@ class RecipeService:
         cls.recipes.append(recipe)
         return recipe
 
-    @classmethod
-    def get_all_recipes(cls) -> List[Recipe]:
-        return cls.recipes
+    # @classmethod
+    # def get_all_recipes(cls) -> List[Recipe]:
+    #     return cls.recipes
 
     @classmethod
     def get_recipe(cls, title: str) -> Optional[Recipe]:

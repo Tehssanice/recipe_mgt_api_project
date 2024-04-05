@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from models import Recipe
 from services import RecipeService
-from typing import List
+# from typing import List
 
 router = APIRouter()
 
@@ -11,9 +11,9 @@ def create_recipe(recipe: Recipe):
     return RecipeService.create_recipe(recipe)
 
 
-@router.get("/recipes/", response_model=List[Recipe])
-def get_recipes():
-    return RecipeService.get_all_recipes()
+# @router.get("/recipes/", response_model=List[Recipe])
+# def get_recipes():
+#     return RecipeService.get_all_recipes()
 
 
 @router.get("/recipes/{title}", response_model=Recipe)
